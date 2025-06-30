@@ -17,9 +17,21 @@ const Home = () => {
       token = urlToken;
     }
 
-    if (!token) {
+    /*if (!token) {
       window.location.href = "http://localhost:3000";
-    }
+    }*/
+   if (!token) {
+    window.location.href = "https://zerodha-frontend-g99j.onrender.com";
+  }
+  // 3️⃣ Fetch protected data from backend
+    fetch("https://zerodha-clone-lb23.onrender.com/api/dashboard", {
+      headers: {
+        Authorization: `Bearer ${token}`
+      }
+    })
+      .then((res) => res.json())
+      .then((result) => setData(result))
+      .catch((err) => console.error("Dashboard fetch error:", err));
   }, []); 
 
 
