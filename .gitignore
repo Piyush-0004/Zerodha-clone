@@ -1,0 +1,19 @@
+# Ignore environment files
+backend/.env
+
+# Ignore node_modules everywhere
+**/node_modules/
+
+# Ignore build outputs
+**/build/
+**/dist/
+
+# Editor & OS junk
+.DS_Store
+.vscode/
+.idea/
+*.log
+*.swp
+*.swo
+*.tmp
+*.bak
