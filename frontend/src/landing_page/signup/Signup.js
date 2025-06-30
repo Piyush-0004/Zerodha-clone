@@ -51,9 +51,14 @@ function SignUp() {
     setLoggedIn(false);
   };
 
-  const handleDashboardRedirect = () => {
+  /*const handleDashboardRedirect = () => {
     const token = localStorage.getItem('token');    //new
     window.location.href = 'http://localhost:3001?token=${token}'; // replace with your dashboard URL
+  };*/
+
+  const handleDashboardRedirect = () => {
+    const token = localStorage.getItem('token');
+    window.location.href = `https://zerodha-dashboard-ph0n.onrender.com?token=${token}`;
   };
   
   return (
