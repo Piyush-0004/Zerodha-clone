@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useContext } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import GeneralContext from "./GeneralContext";
@@ -9,18 +10,19 @@ const SellActionWindow = ({ uid }) => {
   const [stockQuantity, setStockQuantity] = useState(1);
   const [stockPrice, setStockPrice] = useState(0.0);
 
+  const context = useContext(GeneralContext);
+
   const handleSellClick = () => {
     axios
       .post("https://zerodha-clone-lb23.onrender.com/newOrder", {
         name: uid,
         qty: stockQuantity,
         price: stockPrice,
-        mode: "SELL", //  Important: set mode as SELL
+        mode: "SELL", 
       })
       .then(() => {
         alert(" Sell order placed!");
-        GeneralContext.closeSellWindow();
-        window.location.reload(); // Optionally refresh page
+        context.closeSellWindow();
       })
       .catch((err) => {
         console.error(" Sell order failed:", err);
@@ -29,7 +31,7 @@ const SellActionWindow = ({ uid }) => {
   };
 
   const handleCancelClick = () => {
-    GeneralContext.closeSellWindow();
+    context.closeSellWindow();
   };
 
   return (
