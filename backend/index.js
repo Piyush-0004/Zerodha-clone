@@ -269,7 +269,7 @@ app.get("/api/dashboard", async(req, res) => {
     const holdings = await HoldingsModel.find({});
     const positions = await PositionsModel.find({});
 
-    res.json({ message: "Welcome to the dashboard!", userId: decoded.userId });
+    res.json({ message: "Welcome to the dashboard!", userId: decoded.userId, holdings, positions});
   } catch (err) {
     res.sendStatus(403);
   }
