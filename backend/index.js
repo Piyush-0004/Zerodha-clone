@@ -269,8 +269,13 @@ app.get("/api/dashboard", async(req, res) => {
     const holdings = await HoldingsModel.find({});
     const positions = await PositionsModel.find({});
 
-    res.json({ message: "Welcome to the dashboard!", userId: decoded.userId, holdings, positions});
+   /* res.json({ message: "Welcome to the dashboard!", userId: decoded.userId, holdings, positions});
+   } catch (err) {
+    res.sendStatus(403);
+  } */
+  res.json({ holdings, positions }); // ✅ Clean + works with frontend
   } catch (err) {
+    console.error("Dashboard error:", err.message);
     res.sendStatus(403);
   }
 });
