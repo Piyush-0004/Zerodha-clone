@@ -204,6 +204,7 @@ app.get("/allPositions", async (req , res) => {
     let allPositions = await PositionsModel.find({});
     res.json(allPositions);
 });
+
 // Get all orders
 app.get("/allOrders", async (req, res) => {
   try {
@@ -213,7 +214,8 @@ app.get("/allOrders", async (req, res) => {
     console.error("Error fetching orders:", err);
     res.status(500).json({ error: "Failed to fetch orders" });     // new 
   }
-});          
+});  
+        
 app.post("/newOrder", async(req,res) => {
     let newOrder = new OrdersModel({
         name: req.body.name,
@@ -286,6 +288,16 @@ app.get("/api/dashboard", async(req, res) => {
   } catch (err) {
     console.error("Dashboard error:", err.message);
     res.sendStatus(403);
+  }
+});
+
+app.delete("/deleteOrder/:id", async (req, res) => {
+  try {
+    await OrdersModel.findByIdAndDelete(req.params.id);
+    res.status(200).json({ message: "Order deleted" });
+  } catch (err) {
+    console.error("Delete error:", err);
+    res.status(500).json({ error: "Failed to delete order" });
   }
 });
 
