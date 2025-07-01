@@ -4,7 +4,7 @@ A full-stack Zerodha clone built with **React**, **Node.js**, **MongoDB**, and *
 
  # Live Demo
 
-* **Frontend:** [https://zerodha-frontend-g99j.onrender.com](https://zerodha-frontend-g99j.onrender.com)
+* **Link:** [https://zerodha-frontend-g99j.onrender.com](https://zerodha-frontend-g99j.onrender.com)
 
 
  # Project Structure
