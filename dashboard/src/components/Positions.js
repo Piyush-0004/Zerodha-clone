@@ -9,10 +9,15 @@ import axios from "axios";
 const Positions = () => {
   const [allPositions, setAllPositions] = useState([]);
 
-  useEffect(() => {
+ /* useEffect(() => {
     axios.get("http://localhost:3002/allPositions").then((res)=>{
       setAllPositions(res.data);
-    })
+    }) */
+   useEffect(() => {
+    axios.get("https://zerodha-clone-lb23.onrender.com/allPositions")
+      .then((res) => {
+        setAllPositions(res.data);
+      }) 
   }, []);
   return (
     <>
