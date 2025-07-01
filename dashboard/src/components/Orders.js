@@ -6,8 +6,7 @@ import { Link } from "react-router-dom";
 const Orders = () => {
     const [orders, setOrders] = useState([]);
      useEffect(() => {
-    axios
-      .get("https://zerodha-clone-lb23.onrender.com/allOrders")
+      axios.get("https://zerodha-clone-lb23.onrender.com/allOrders")
       .then((res) => setOrders(res.data))
       .catch((err) => console.error("Failed to fetch orders", err));
   }, []);
