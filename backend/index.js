@@ -257,13 +257,18 @@ app.post("/api/login", async (req, res) => {
 });
 
 //  Protected Dashboard Route
-app.get("/api/dashboard", (req, res) => {
+app.get("/api/dashboard", async(req, res) => {
   const authHeader = req.headers.authorization;
   if (!authHeader) return res.sendStatus(401);
 
   const token = authHeader.split(" ")[1];
   try {
     const decoded = jwt.verify(token, process.env.JWT_SECRET);
+
+    // Fetch holdings and positions from DB
+    const holdings = await HoldingsModel.find({});
+    const positions = await PositionsModel.find({});
+
     res.json({ message: "Welcome to the dashboard!", userId: decoded.userId });
   } catch (err) {
     res.sendStatus(403);
