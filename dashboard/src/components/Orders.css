@@ -1,0 +1,26 @@
+.order-row.buy {
+  background-color: rgba(76, 175, 80, 0.1); /* Light green for BUY */
+}
+
+.order-row.sell {
+  background-color: rgba(244, 67, 54, 0.1); /* Light red for SELL */
+}
+
+.order-mode-buy {
+  color: green;
+  font-weight: bold;
+}
+
+.order-mode-sell {
+  color: red;
+  font-weight: bold;
+}
+
+.order-delete-button {
+  background: red;
+  color: white;
+  border: none;
+  padding: 4px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
