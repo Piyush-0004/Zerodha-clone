@@ -69,7 +69,7 @@ JWT_SECRET=your-secret-key
 * **frontend/.env** and **dashboard/.env**
 
 ```
-REACT_APP_API_URL=https://zerodha-clone-lb23.onrender.com
+REACT_APP_API_URL=https://your local host port
 ```
 
 4. Run apps:
