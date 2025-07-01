@@ -204,7 +204,16 @@ app.get("/allPositions", async (req , res) => {
     let allPositions = await PositionsModel.find({});
     res.json(allPositions);
 });
-
+// Get all orders
+app.get("/allOrders", async (req, res) => {
+  try {
+    const orders = await OrdersModel.find({});
+    res.json(orders);
+  } catch (err) {
+    console.error("Error fetching orders:", err);
+    res.status(500).json({ error: "Failed to fetch orders" });     // new 
+  }
+});          
 app.post("/newOrder", async(req,res) => {
     let newOrder = new OrdersModel({
         name: req.body.name,
