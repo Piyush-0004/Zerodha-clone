@@ -106,9 +106,9 @@ cd ../dashboard && npm start
 * Unit testing with Jest
 
 
-# Feedback
+## Feedback
 
 Feel free to open an issue or reach out for improvements and suggestions!
 
 
-#  GitHub Repo: [Piyush-0004/Zerodha-clone](https://github.com/Piyush-0004/Zerodha-clone)
+##  GitHub Repo: [Piyush-0004/Zerodha-clone](https://github.com/Piyush-0004/Zerodha-clone)
