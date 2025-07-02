@@ -2,26 +2,26 @@
 
 A full-stack Zerodha clone built with **React**, **Node.js**, **MongoDB**, and **Express**. It replicates core features like login/signup, dashboard, buy/sell stocks, view holdings, positions, and order management.
 
- # Live Demo
+ ## Live Demo
 
 * **Link:** [https://zerodha-frontend-g99j.onrender.com](https://zerodha-frontend-g99j.onrender.com)
 
 
- # Project Structure
+ ## Project Structure
 
 Zerodha-clone/
 ├── backend/        # Node.js + Express + MongoDB
 ├── frontend/       # React frontend with login/signup
 └── dashboard/      # React dashboard (after login)
 
- # Authentication
+ ## Authentication
 
 * **JWT-based login/signup**
 * Token stored in localStorage and passed in `Authorization` header
 * Protected dashboard routes on backend (`/api/dashboard`)
 
 
-# Features
+## Features
 
 * Login and Signup with validation
 * Secure dashboard only accessible after login
@@ -31,7 +31,7 @@ Zerodha-clone/
 * Color-coded orders by type (BUY/SELL)
 
 
-# Technologies Used
+## Technologies Used
 
 * **Frontend:** React, React Router, Axios
 * **Dashboard:** React, Charts (Chart.js), MUI Icons
@@ -40,7 +40,7 @@ Zerodha-clone/
 
 ---
 
-# Setup Instructions (Locally)
+## Setup Instructions (Locally)
 
 1. Clone the repo:
 
@@ -87,7 +87,7 @@ cd ../dashboard && npm start
 
 ---
 
-#  Deployment Notes
+##  Deployment Notes
 
 * Use **Render** to deploy each folder separately:
 
@@ -98,7 +98,7 @@ cd ../dashboard && npm start
 * Add `_redirects` file or `.htaccess` only if using static hosting
 
 
-# Future Enhancements
+## Future Enhancements
 
 * Add user-specific holdings/orders
 * Pagination + filters in orders
