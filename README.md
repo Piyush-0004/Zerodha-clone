@@ -1,4 +1,4 @@
-                # Zerodha Clone
+   # Zerodha Clone
 
 A full-stack Zerodha clone built with **React**, **Node.js**, **MongoDB**, and **Express**. It replicates core features like login/signup, dashboard, buy/sell stocks, view holdings, positions, and order management.
 
